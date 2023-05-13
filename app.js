@@ -9,8 +9,8 @@ const mongoose = require("mongoose")
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set("view engine", "ejs")
-app.use(express.static("public"))
-mongoose.connect( process.env.MONGO_DB, { useNewUrlParser: true, useUnifiedTopology: true })
+app.use(express.static( __dirname + "public"))
+mongoose.connect( process.env.MONGO_DB, { useNewUrlParser: true })
 
 
 const contentSchema = new mongoose.Schema({
