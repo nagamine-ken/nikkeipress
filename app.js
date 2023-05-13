@@ -66,6 +66,10 @@ app.get("/login", function(req, res){
     res.render("login")
 })
 
+app.get("/press", (req, res)=>{
+    res.render("press")
+})
+
 
 
 // Here I'm deleting a document by Id:
