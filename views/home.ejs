@@ -1,0 +1,33 @@
+<%- include("partials/header") %>
+
+
+<div class="container-fluid">
+    <div class="px-4 py-5 my-5">
+      
+    <h1>EJS CRUD</h1>
+
+    <form action="/submit" method="POST">
+        <input type="text" name="content">
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+
+      <h2>Content List:</h2>
+
+      <% contents.forEach(function(item){ %>
+
+        <p>
+          <%= item.content %>
+          <a href="/delete/<%=item._id%>">Delete</a>
+          <a href="/update/<%=item._id%>">Update</a>         
+        </p>
+        
+
+
+        <% }) %>
+
+    </div>
+  </div>
+
+
+<%- include("partials/footer") %>
